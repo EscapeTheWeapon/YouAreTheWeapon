@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cmbyoqylas2fe"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ButtonStart" type="Button" parent="."]
+offset_left = 424.0
+offset_top = 152.0
+offset_right = 729.0
+offset_bottom = 268.0
+toggle_mode = true
+button_pressed = true
+action_mode = 0
+text = "START"
+
+[node name="ButtonQuit" type="Button" parent="."]
+offset_left = 424.0
+offset_top = 344.0
+offset_right = 729.0
+offset_bottom = 460.0
+toggle_mode = true
+button_pressed = true
+action_mode = 0
+text = "QUIT"
