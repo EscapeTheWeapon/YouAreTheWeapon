@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://elnirtspaicu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kbpll"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_byl6a"]
+
+[node name="WeaponScene" type="Node3D"]
+
+[node name="PlayerPOV" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 100, 0)
+current = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(154.02, 0, 0, 0, 154.02, 0, 0, 0, 154.02, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_kbpll")
+mesh = SubResource("PlaneMesh_byl6a")
