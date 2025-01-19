@@ -18,6 +18,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="ButtonStart" type="Button" parent="Main_Menu/Control"]
+layout_mode = 0
 offset_left = 424.0
 offset_top = 152.0
 offset_right = 729.0
@@ -28,6 +29,7 @@ action_mode = 0
 text = "START"
 
 [node name="ButtonQuit" type="Button" parent="Main_Menu/Control"]
+layout_mode = 0
 offset_left = 424.0
 offset_top = 344.0
 offset_right = 729.0
