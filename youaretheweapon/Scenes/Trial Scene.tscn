@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://0qnoq5cxghy1"]
+[gd_scene load_steps=3 format=3 uid="uid://0qnoq5cxghy1"]
+
+[ext_resource type="PackedScene" uid="uid://b8dbfm3oo10mo" path="res://Scenes/button_basic.tscn" id="1_utive"]
+[ext_resource type="Script" path="res://Scripts/button_start.gd" id="2_vuw4n"]
 
 [node name="TrialScene" type="Node2D"]
+
+[node name="BasicHitButton" parent="." instance=ExtResource("1_utive")]
+position = Vector2(422, 278)
+script = ExtResource("2_vuw4n")

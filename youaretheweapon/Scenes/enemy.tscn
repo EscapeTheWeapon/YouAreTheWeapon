@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2wupdyc4fbr8"]
+
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_44ggm"]
+[ext_resource type="Texture2D" uid="uid://v7373b8db5ke" path="res://Assets/Enemy guy.png" id="2_mvpnq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_woo8p"]
+size = Vector2(476, 155)
+
+[node name="Enemy" type="Area2D"]
+scale = Vector2(0.285315, 0.338078)
+script = ExtResource("1_44ggm")
+metadata/_edit_group_ = true
+
+[node name="EnemyGuy" type="Sprite2D" parent="."]
+position = Vector2(237.25, 77)
+scale = Vector2(0.945219, 0.939024)
+texture = ExtResource("2_mvpnq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(238, 77.5)
+shape = SubResource("RectangleShape2D_woo8p")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
