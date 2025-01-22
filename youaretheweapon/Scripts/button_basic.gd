@@ -18,7 +18,7 @@ func _process(delta: float):
 		button_pressed.emit()
 	else:
 		touch_down = false
-	#print(touch_down)
+	print(touch_down)
 
 func _on_mouse_entered():
 	mouse_inside_area = true
