@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://b76sxhmt4gxpx"]
+
+[ext_resource type="Script" path="res://Scripts/Buttons/status_light.gd" id="1_lfkrv"]
+[ext_resource type="Texture2D" uid="uid://cb5rdumit2vr7" path="res://Assets/Buttons/status_light.png" id="2_bdqee"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xjmj"]
+atlas = ExtResource("2_bdqee")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0r31v"]
+atlas = ExtResource("2_bdqee")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7wa1r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xjmj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0r31v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.0
+}]
+
+[node name="StatusLight" type="Node2D"]
+script = ExtResource("1_lfkrv")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(32, 32)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_7wa1r")
+speed_scale = 0.0

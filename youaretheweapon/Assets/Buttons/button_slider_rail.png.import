@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxwtb46bkb4a6"
-path="res://.godot/imported/button_press_hold.png-c46cab001cd6690ca0eb8bdbc8a74b80.ctex"
+uid="uid://da2vcg77hn11l"
+path="res://.godot/imported/button_slider_rail.png-eb80e4061652a99504ac58d9c3ce189b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/button_press_hold.png"
-dest_files=["res://.godot/imported/button_press_hold.png-c46cab001cd6690ca0eb8bdbc8a74b80.ctex"]
+source_file="res://Assets/Buttons/button_slider_rail.png"
+dest_files=["res://.godot/imported/button_slider_rail.png-eb80e4061652a99504ac58d9c3ce189b.ctex"]
 
 [params]
 

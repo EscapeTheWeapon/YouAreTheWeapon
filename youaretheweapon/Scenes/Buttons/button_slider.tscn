@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfoj25lvq0b1y"]
+
+[ext_resource type="Script" path="res://Scripts/Buttons/button_slider.gd" id="1_1reqb"]
+[ext_resource type="Texture2D" uid="uid://c6jggp6s3jfjm" path="res://Assets/Buttons/button_slider_piece.png" id="1_cy3we"]
+[ext_resource type="Texture2D" uid="uid://da2vcg77hn11l" path="res://Assets/Buttons/button_slider_rail.png" id="1_ylstg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hw0c4"]
+size = Vector2(65.5, 37.5)
+
+[node name="ButtonSlider" type="Node2D"]
+script = ExtResource("1_1reqb")
+metadata/_edit_group_ = true
+
+[node name="SliderRail" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="SliderRail"]
+position = Vector2(134, 24)
+scale = Vector2(1.04688, 0.498047)
+texture = ExtResource("1_ylstg")
+
+[node name="Line2D" type="Line2D" parent="SliderRail"]
+points = PackedVector2Array(42, 24, 227, 24)
+width = 3.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="SliderPiece" type="Area2D" parent="."]
+position = Vector2(42, 24)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="SliderPiece"]
+scale = Vector2(0.480469, 0.503906)
+texture = ExtResource("1_cy3we")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SliderPiece"]
+shape = SubResource("RectangleShape2D_hw0c4")
+
+[connection signal="mouse_entered" from="SliderPiece" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SliderPiece" to="." method="_on_mouse_exited"]

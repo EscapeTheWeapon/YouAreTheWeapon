@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b8dbfm3oo10mo"]
 
-[ext_resource type="Script" path="res://Scripts/button_basic.gd" id="1_3p1li"]
-[ext_resource type="Texture2D" uid="uid://62pwd4dfsi20" path="res://Assets/button_basic.png" id="1_ijqjt"]
+[ext_resource type="Script" path="res://Scripts/Buttons/button_basic.gd" id="1_3p1li"]
+[ext_resource type="Texture2D" uid="uid://62pwd4dfsi20" path="res://Assets/Buttons/button_basic.png" id="1_ijqjt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_545yu"]
 radius = 40.0
