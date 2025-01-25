@@ -7,7 +7,6 @@
 radius = 40.0
 
 [node name="BasicHitButton" type="Area2D"]
-position = Vector2(184, 141)
 script = ExtResource("1_3p1li")
 metadata/_edit_group_ = true
 

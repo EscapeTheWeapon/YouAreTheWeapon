@@ -1,16 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://da5beebu3r46d"]
+[gd_scene load_steps=4 format=3 uid="uid://da5beebu3r46d"]
 
+[ext_resource type="Texture2D" uid="uid://dxwtb46bkb4a6" path="res://Assets/button_press_hold.png" id="1_hemsw"]
 [ext_resource type="Script" path="res://Scripts/button_press_hold.gd" id="1_lowx1"]
-[ext_resource type="PackedScene" uid="uid://b8dbfm3oo10mo" path="res://Scenes/button_basic.tscn" id="2_wongt"]
 
-[node name="ButtonPressHold" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_fh6vj"]
+radius = 40.0
+
+[node name="ButtonPressHold" type="Area2D"]
 script = ExtResource("1_lowx1")
-length_to_hold = 2.0
+metadata/_edit_group_ = true
 
-[node name="BasicHitButton" parent="." instance=ExtResource("2_wongt")]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(40, 40)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("1_hemsw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(40, 40)
+shape = SubResource("CircleShape2D_fh6vj")
 
 [node name="HoldTimer" type="Timer" parent="."]
 wait_time = 2.0
 
-[connection signal="button_pressed" from="BasicHitButton" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="timeout" from="HoldTimer" to="." method="_on_hold_timer_timeout"]
