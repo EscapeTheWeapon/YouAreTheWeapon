@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bba1itm8n30rc"]
+
+[ext_resource type="PackedScene" uid="uid://b8dbfm3oo10mo" path="res://Scenes/Buttons/button_basic.tscn" id="1_j5diu"]
+[ext_resource type="PackedScene" uid="uid://b76sxhmt4gxpx" path="res://Scenes/Buttons/status_light.tscn" id="2_ogjcv"]
+[ext_resource type="PackedScene" uid="uid://da5beebu3r46d" path="res://Scenes/Buttons/button_press_hold.tscn" id="3_giypt"]
+[ext_resource type="PackedScene" uid="uid://cfoj25lvq0b1y" path="res://Scenes/Buttons/button_slider.tscn" id="4_4cv2e"]
+
+[node name="TestButtons" type="Node"]
+
+[node name="BasicHitButton" parent="." instance=ExtResource("1_j5diu")]
+position = Vector2(72, 120)
+
+[node name="StatusLight" parent="BasicHitButton" instance=ExtResource("2_ogjcv")]
+position = Vector2(8, -72)
+
+[node name="ButtonPressHold" parent="." instance=ExtResource("3_giypt")]
+position = Vector2(264, 120)
+
+[node name="StatusLight" parent="ButtonPressHold" instance=ExtResource("2_ogjcv")]
+position = Vector2(8, -72)
+
+[node name="ButtonSlider" parent="." instance=ExtResource("4_4cv2e")]
+position = Vector2(440, 136)
+
+[node name="StatusLight" parent="ButtonSlider" instance=ExtResource("2_ogjcv")]
+position = Vector2(104, -88)
+
+[connection signal="button_pressed" from="BasicHitButton" to="BasicHitButton/StatusLight" method="_on_button_pressed"]
+[connection signal="button_pressed" from="ButtonPressHold" to="ButtonPressHold/StatusLight" method="_on_button_pressed"]
+[connection signal="button_pressed" from="ButtonSlider" to="ButtonSlider/StatusLight" method="_on_button_pressed"]

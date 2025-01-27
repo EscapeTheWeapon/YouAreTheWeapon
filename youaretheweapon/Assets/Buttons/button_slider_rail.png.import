@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://62pwd4dfsi20"
-path="res://.godot/imported/button_basic.png-abb4e43c0ea69fa49a6916dc7d5908e9.ctex"
+uid="uid://da2vcg77hn11l"
+path="res://.godot/imported/button_slider_rail.png-eb80e4061652a99504ac58d9c3ce189b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/button_basic.png"
-dest_files=["res://.godot/imported/button_basic.png-abb4e43c0ea69fa49a6916dc7d5908e9.ctex"]
+source_file="res://Assets/Buttons/button_slider_rail.png"
+dest_files=["res://.godot/imported/button_slider_rail.png-eb80e4061652a99504ac58d9c3ce189b.ctex"]
 
 [params]
 

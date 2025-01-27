@@ -12,9 +12,10 @@ func _process(delta: float):
 		$".".queue_free()
 
 func _on_mouse_entered():
-	pass # Replace with function body.
+	#pass # Replace with function body.
 	mouse_inside_area = true
 
 func _on_mouse_exited():
-	pass # Replace with function body.
+	# by leaving pass before the rest of the function, it will essentially return without doing anything
+	#pass # Replace with function body.
 	mouse_inside_area = false
