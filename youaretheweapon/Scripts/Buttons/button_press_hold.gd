@@ -3,7 +3,7 @@ extends Node2D
 @export_range(0, 10, .1, "or_greater") var length_to_hold: float
 
 # signal given upon success
-signal button_pressed
+signal button_pressed(is_pressed)
 
 var touch_down = false
 var mouse_inside_area = false
@@ -37,6 +37,6 @@ func _on_mouse_exited():
 	mouse_inside_area = false
 
 func _on_hold_timer_timeout():
-	button_pressed.emit()
+	button_pressed.emit(true)
 	#print("DONE")
 
