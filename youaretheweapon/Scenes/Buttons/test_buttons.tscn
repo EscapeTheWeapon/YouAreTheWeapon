@@ -1,21 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://bba1itm8n30rc"]
+[gd_scene load_steps=7 format=3 uid="uid://bba1itm8n30rc"]
 
 [ext_resource type="PackedScene" uid="uid://b8dbfm3oo10mo" path="res://Scenes/Buttons/button_basic.tscn" id="1_j5diu"]
 [ext_resource type="PackedScene" uid="uid://b76sxhmt4gxpx" path="res://Scenes/Buttons/status_light.tscn" id="2_ogjcv"]
 [ext_resource type="PackedScene" uid="uid://da5beebu3r46d" path="res://Scenes/Buttons/button_press_hold.tscn" id="3_giypt"]
 [ext_resource type="PackedScene" uid="uid://cfoj25lvq0b1y" path="res://Scenes/Buttons/button_slider.tscn" id="4_4cv2e"]
 [ext_resource type="PackedScene" uid="uid://0obrgi2k0nuf" path="res://Scenes/Buttons/button_receiver.tscn" id="4_iuwg7"]
+[ext_resource type="PackedScene" uid="uid://gn4gedrwu0b" path="res://Scenes/player_arm_cursor.tscn" id="6_rj7bu"]
 
 [node name="TestButtons" type="Node"]
 
 [node name="BasicHitButton" parent="." instance=ExtResource("1_j5diu")]
-position = Vector2(72, 120)
+position = Vector2(352, 232)
 
 [node name="StatusLight" parent="BasicHitButton" instance=ExtResource("2_ogjcv")]
 position = Vector2(8, -72)
 
 [node name="ButtonPressHold" parent="." instance=ExtResource("3_giypt")]
-position = Vector2(264, 120)
+position = Vector2(552, 232)
 
 [node name="StatusLight2" parent="ButtonPressHold" instance=ExtResource("2_ogjcv")]
 position = Vector2(8, -72)
@@ -27,10 +28,13 @@ position = Vector2(0, 200)
 position = Vector2(8, -88)
 
 [node name="ButtonSlider" parent="." instance=ExtResource("4_4cv2e")]
-position = Vector2(440, 136)
+position = Vector2(720, 248)
 
 [node name="StatusLight" parent="ButtonSlider" instance=ExtResource("2_ogjcv")]
 position = Vector2(104, -88)
+
+[node name="PlayerArmCursor" parent="." instance=ExtResource("6_rj7bu")]
+position = Vector2(448, 224)
 
 [connection signal="button_pressed" from="BasicHitButton" to="BasicHitButton/StatusLight" method="_on_button_pressed"]
 [connection signal="button_pressed" from="ButtonPressHold" to="ButtonPressHold/StatusLight2" method="_on_button_pressed"]
