@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://0obrgi2k0nuf"]
+
+[ext_resource type="Script" path="res://Scripts/Buttons/button_receiver.gd" id="1_0bok8"]
+[ext_resource type="Texture2D" uid="uid://fdtem0m1obub" path="res://Assets/Buttons/button_receiver.png" id="2_r0aw6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_545yu"]
+radius = 40.0
+
+[node name="ButtonReceiver" type="Area2D"]
+script = ExtResource("1_0bok8")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(40, 40)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("2_r0aw6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(40, 40)
+shape = SubResource("CircleShape2D_545yu")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

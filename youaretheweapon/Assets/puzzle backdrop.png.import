@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu4g3vv6g6apw"
-path="res://.godot/imported/button_press_hold.png-d0a9f92ed6dbfda8058b53242e229917.ctex"
+uid="uid://bfrwktro17ax6"
+path="res://.godot/imported/puzzle backdrop.png-0f6dcec38df1f1c866d20ccdf76c658a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Buttons/button_press_hold.png"
-dest_files=["res://.godot/imported/button_press_hold.png-d0a9f92ed6dbfda8058b53242e229917.ctex"]
+source_file="res://Assets/puzzle backdrop.png"
+dest_files=["res://.godot/imported/puzzle backdrop.png-0f6dcec38df1f1c866d20ccdf76c658a.ctex"]
 
 [params]
 

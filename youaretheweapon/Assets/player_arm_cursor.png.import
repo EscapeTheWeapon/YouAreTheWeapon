@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu4g3vv6g6apw"
-path="res://.godot/imported/button_press_hold.png-d0a9f92ed6dbfda8058b53242e229917.ctex"
+uid="uid://c5g6cgv6xdgbu"
+path="res://.godot/imported/player_arm_cursor.png-9c3e7e06d83d3b3eaea585c50df5d791.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Buttons/button_press_hold.png"
-dest_files=["res://.godot/imported/button_press_hold.png-d0a9f92ed6dbfda8058b53242e229917.ctex"]
+source_file="res://Assets/player_arm_cursor.png"
+dest_files=["res://.godot/imported/player_arm_cursor.png-9c3e7e06d83d3b3eaea585c50df5d791.ctex"]
 
 [params]
 
