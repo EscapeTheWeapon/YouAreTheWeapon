@@ -1,49 +1,49 @@
-[gd_scene load_steps=9 format=3 uid="uid://bba1itm8n30rc"]
+[gd_scene load_steps=9 format=3 uid="uid://b32h57f8odc6p"]
 
-[ext_resource type="Script" path="res://Scripts/puzzle_counter.gd" id="1_ai1vh"]
-[ext_resource type="PackedScene" uid="uid://b8dbfm3oo10mo" path="res://Scenes/Buttons/button_basic.tscn" id="1_j5diu"]
-[ext_resource type="PackedScene" uid="uid://b76sxhmt4gxpx" path="res://Scenes/Buttons/status_light.tscn" id="2_ogjcv"]
-[ext_resource type="PackedScene" uid="uid://da5beebu3r46d" path="res://Scenes/Buttons/button_press_hold.tscn" id="3_giypt"]
-[ext_resource type="PackedScene" uid="uid://cfoj25lvq0b1y" path="res://Scenes/Buttons/button_slider.tscn" id="4_4cv2e"]
-[ext_resource type="PackedScene" uid="uid://0obrgi2k0nuf" path="res://Scenes/Buttons/button_receiver.tscn" id="4_iuwg7"]
-[ext_resource type="PackedScene" uid="uid://gn4gedrwu0b" path="res://Scenes/player_arm_cursor.tscn" id="6_rj7bu"]
-[ext_resource type="Texture2D" uid="uid://bfrwktro17ax6" path="res://Assets/puzzle backdrop.png" id="7_t1gm1"]
+[ext_resource type="Script" path="res://Scripts/puzzle_counter.gd" id="1_pqw5e"]
+[ext_resource type="Texture2D" uid="uid://bfrwktro17ax6" path="res://Assets/puzzle backdrop.png" id="2_sgbgm"]
+[ext_resource type="PackedScene" uid="uid://gn4gedrwu0b" path="res://Scenes/player_arm_cursor.tscn" id="3_a52my"]
+[ext_resource type="PackedScene" uid="uid://b8dbfm3oo10mo" path="res://Scenes/Buttons/button_basic.tscn" id="4_yqle1"]
+[ext_resource type="PackedScene" uid="uid://b76sxhmt4gxpx" path="res://Scenes/Buttons/status_light.tscn" id="5_21wkd"]
+[ext_resource type="PackedScene" uid="uid://cfoj25lvq0b1y" path="res://Scenes/Buttons/button_slider.tscn" id="6_oiwgg"]
+[ext_resource type="PackedScene" uid="uid://0obrgi2k0nuf" path="res://Scenes/Buttons/button_receiver.tscn" id="7_vem2w"]
+[ext_resource type="PackedScene" uid="uid://da5beebu3r46d" path="res://Scenes/Buttons/button_press_hold.tscn" id="8_fxihx"]
 
 [node name="TestButtons" type="Node"]
-script = ExtResource("1_ai1vh")
+script = ExtResource("1_pqw5e")
 
 [node name="PuzzleBackdrop" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(576, 325)
 scale = Vector2(1.2, 1.1963)
-texture = ExtResource("7_t1gm1")
+texture = ExtResource("2_sgbgm")
 
-[node name="PlayerArmCursor" parent="." instance=ExtResource("6_rj7bu")]
-visible = false
+[node name="PlayerArmCursor" parent="." instance=ExtResource("3_a52my")]
 position = Vector2(448, 224)
 
-[node name="BasicHitButton" parent="." instance=ExtResource("1_j5diu")]
+[node name="BasicHitButton" parent="." instance=ExtResource("4_yqle1")]
 position = Vector2(96, 176)
 
-[node name="StatusLight" parent="BasicHitButton" instance=ExtResource("2_ogjcv")]
+[node name="StatusLight" parent="BasicHitButton" instance=ExtResource("5_21wkd")]
 position = Vector2(8, -72)
 
 [node name="Slider" type="Node2D" parent="."]
 position = Vector2(432, 232)
 
-[node name="ButtonSlider" parent="Slider" instance=ExtResource("4_4cv2e")]
+[node name="ButtonSlider" parent="Slider" instance=ExtResource("6_oiwgg")]
 position = Vector2(384, 248)
 rotation = 0.457276
+length_to_hold = 1.8
 
-[node name="StatusLight" parent="Slider" instance=ExtResource("2_ogjcv")]
+[node name="StatusLight" parent="Slider" instance=ExtResource("5_21wkd")]
 position = Vector2(480, 272)
 rotation = -1.0472
 scale = Vector2(0.7, 0.7)
 
-[node name="ButtonReceiver" parent="Slider" instance=ExtResource("4_iuwg7")]
+[node name="ButtonReceiver" parent="Slider" instance=ExtResource("7_vem2w")]
 position = Vector2(-24, 0)
 
-[node name="StatusLight" parent="Slider/ButtonReceiver" instance=ExtResource("2_ogjcv")]
+[node name="StatusLight" parent="Slider/ButtonReceiver" instance=ExtResource("5_21wkd")]
 position = Vector2(8, -24)
 rotation = -1.0472
 
@@ -51,34 +51,34 @@ rotation = -1.0472
 position = Vector2(472, 288)
 scale = Vector2(0.8, 0.8)
 
-[node name="ButtonPressHold" parent="Keypad" instance=ExtResource("3_giypt")]
+[node name="ButtonPressHold" parent="Keypad" instance=ExtResource("8_fxihx")]
 position = Vector2(130, 9.99998)
 scale = Vector2(1.25, 1.25)
 
-[node name="StatusLight2" parent="Keypad/ButtonPressHold" instance=ExtResource("2_ogjcv")]
+[node name="StatusLight2" parent="Keypad/ButtonPressHold" instance=ExtResource("5_21wkd")]
 position = Vector2(72, 80)
 rotation = -1.0472
 scale = Vector2(0.705, 0.705)
 
-[node name="One" parent="Keypad" instance=ExtResource("4_iuwg7")]
+[node name="One" parent="Keypad" instance=ExtResource("7_vem2w")]
 position = Vector2(-20, 260)
 
-[node name="Two" parent="Keypad" instance=ExtResource("4_iuwg7")]
+[node name="Two" parent="Keypad" instance=ExtResource("7_vem2w")]
 position = Vector2(110, 240)
 
-[node name="Three" parent="Keypad" instance=ExtResource("4_iuwg7")]
+[node name="Three" parent="Keypad" instance=ExtResource("7_vem2w")]
 position = Vector2(60, 320)
 
-[node name="Four" parent="Keypad" instance=ExtResource("4_iuwg7")]
+[node name="Four" parent="Keypad" instance=ExtResource("7_vem2w")]
 position = Vector2(70, 100)
 
-[node name="Five" parent="Keypad" instance=ExtResource("4_iuwg7")]
+[node name="Five" parent="Keypad" instance=ExtResource("7_vem2w")]
 position = Vector2(20, 180)
 
-[node name="Six" parent="Keypad" instance=ExtResource("4_iuwg7")]
+[node name="Six" parent="Keypad" instance=ExtResource("7_vem2w")]
 position = Vector2(160, 160)
 
-[node name="StatusLight" parent="Keypad" instance=ExtResource("2_ogjcv")]
+[node name="StatusLight" parent="Keypad" instance=ExtResource("5_21wkd")]
 position = Vector2(190, -10)
 rotation = -1.0472
 scale = Vector2(1.39, 1.39)
@@ -86,24 +86,24 @@ scale = Vector2(1.39, 1.39)
 [node name="Plain" type="Node2D" parent="."]
 scale = Vector2(0.825, 0.825)
 
-[node name="BasicHitButton" parent="Plain" instance=ExtResource("1_j5diu")]
+[node name="BasicHitButton" parent="Plain" instance=ExtResource("4_yqle1")]
 position = Vector2(1260.61, 436.364)
 
-[node name="StatusLight" parent="Plain/BasicHitButton" instance=ExtResource("2_ogjcv")]
+[node name="StatusLight" parent="Plain/BasicHitButton" instance=ExtResource("5_21wkd")]
 position = Vector2(-0.000146866, -29.0909)
 rotation = -1.0472
 
-[node name="BasicHitButton2" parent="Plain" instance=ExtResource("1_j5diu")]
+[node name="BasicHitButton2" parent="Plain" instance=ExtResource("4_yqle1")]
 position = Vector2(1124.85, 407.273)
 
-[node name="StatusLight" parent="Plain/BasicHitButton2" instance=ExtResource("2_ogjcv")]
+[node name="StatusLight" parent="Plain/BasicHitButton2" instance=ExtResource("5_21wkd")]
 position = Vector2(9.69697, -38.7879)
 rotation = -1.0472
 
-[node name="BasicHitButton3" parent="Plain" instance=ExtResource("1_j5diu")]
+[node name="BasicHitButton3" parent="Plain" instance=ExtResource("4_yqle1")]
 position = Vector2(998.788, 368.485)
 
-[node name="StatusLight" parent="Plain/BasicHitButton3" instance=ExtResource("2_ogjcv")]
+[node name="StatusLight" parent="Plain/BasicHitButton3" instance=ExtResource("5_21wkd")]
 position = Vector2(9.69697, -29.0909)
 rotation = -1.0472
 
