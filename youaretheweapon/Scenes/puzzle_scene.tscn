@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://0obrgi2k0nuf" path="res://Scenes/Buttons/button_receiver.tscn" id="7_vem2w"]
 [ext_resource type="PackedScene" uid="uid://da5beebu3r46d" path="res://Scenes/Buttons/button_press_hold.tscn" id="8_fxihx"]
 
-[node name="TestButtons" type="Node"]
+[node name="PuzzleScene" type="Node2D"]
 script = ExtResource("1_pqw5e")
 
 [node name="PuzzleBackdrop" type="Sprite2D" parent="."]
