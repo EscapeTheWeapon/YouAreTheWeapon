@@ -7,6 +7,7 @@
 size = Vector2(704, 424)
 
 [node name="PlayerArmCursor" type="Area2D"]
+z_index = 1
 position = Vector2(16, 16)
 script = ExtResource("1_ytv7m")
 metadata/_edit_group_ = true

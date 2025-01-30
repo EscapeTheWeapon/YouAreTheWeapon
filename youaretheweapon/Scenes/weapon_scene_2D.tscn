@@ -3,7 +3,15 @@
 [ext_resource type="Script" path="res://Scripts/enemy spawner.gd" id="1_7c8vy"]
 [ext_resource type="PackedScene" uid="uid://d2wupdyc4fbr8" path="res://Scenes/enemy.tscn" id="2_13nvq"]
 
-[node name="WeaponScene2d" type="Node"]
+
+[sub_resource type="Curve2D" id="Curve2D_aykvm"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -536, 23, 0, 0, 0, 0, -37, 22, 0, 0, 0, 0, -33, 582, 0, 0, 0, 0, -541, 571, 0, 0, 0, 0, -536, 23)
+}
+point_count = 5
+
+[node name="WeaponScene2d" type="Node2D"]
+
 script = ExtResource("1_7c8vy")
 
 [node name="ColorRect" type="ColorRect" parent="."]

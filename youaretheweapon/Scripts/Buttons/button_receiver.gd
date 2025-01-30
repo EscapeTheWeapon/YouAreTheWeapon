@@ -16,7 +16,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float):
-	if Input.is_action_just_pressed("Left Mouse") and mouse_inside_area and is_valid:
+	if Input.is_action_pressed("Left Mouse") and mouse_inside_area and is_valid:
 		touch_down = true
 	button_pressed.emit(touch_down)
 	#print(touch_down)

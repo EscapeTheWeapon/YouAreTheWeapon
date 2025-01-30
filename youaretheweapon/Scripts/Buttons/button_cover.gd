@@ -1,20 +1,19 @@
 extends Node2D
 
-signal is_activated
-
-var single_activation
+var is_valid
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimatedSprite2D.frame = 0
-	single_activation = false
+	is_valid = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float):
-	pass
+	for button in get_children():
+		if button is Area2D:
+			button.monitoring = is_valid
+	
+	$AnimatedSprite2D.frame = is_valid
 
 func _on_button_pressed(is_pressed):
-	$AnimatedSprite2D.frame = is_pressed
-	if is_pressed and not single_activation:
-		is_activated.emit()
-		single_activation = true
+	is_valid = is_pressed
